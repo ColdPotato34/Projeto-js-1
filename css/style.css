@@ -1,0 +1,486 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+.clearfix {
+    clear: both;
+}
+
+/* portão torii */
+.section-hero {
+    width: 100%;
+    height: 100vh;
+    background-image: url('../imagens/portao-torii.avif'); 
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    z-index: 1;
+}
+
+/* navbar */
+.navbar {
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    width: 100%;
+    z-index: 10;
+    text-align: center;
+    padding-top: 30px;
+}
+
+/* logo esquerd */
+.logo {
+    position: absolute;
+    left: 50px;
+    top: 35px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+.logo .dot { 
+    color: #ff4500; 
+    font-size: 20px; 
+    margin-right: 5px; 
+}
+
+/* lupa na dir */
+.search-icon {
+    position: absolute;
+    right: 50px;
+    top: 35px;
+    color: white;
+    cursor: pointer;
+}
+
+/* menu */
+nav { 
+    display: inline-block;
+    text-align: left; 
+}
+
+nav ul { 
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+nav ul li { 
+    display: inline-block;
+    margin: 0 20px; 
+}
+
+nav ul li a { 
+    text-decoration: none;
+    color: #aaa;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase; 
+    transition: color 0.3s;
+}
+
+nav ul li a:hover, nav ul li a.active-link {
+     color: white;
+}
+
+/* linha laj do menu */
+.nav-line-container { 
+    width: 100%;
+    height: 2px;
+    background: rgba(255,255,255,0.2);
+    position: relative; 
+}
+
+.nav-line-active { 
+    width: 16%;
+    height: 100%;
+    background: #ff4500;
+    position: absolute;
+    left: 0; top: 0; 
+}
+
+/* hero */
+.hero-content {
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    z-index: 5;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 80px;
+    line-height: 0.9;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* colunas de texto */
+.info-wrapper {
+    position: absolute;
+    top: 55%; 
+    left: 10%; 
+    width: 80%;
+    z-index: 5;
+    color: white;
+}
+
+.info-columns {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.col {
+    width: 30%;
+    float: left;
+    margin-right: 3.33%;
+}
+.col:last-child { margin-right: 0; } 
+
+.col p { 
+    font-size: 12px;
+    color: #ccc;
+    margin-bottom: 15px;
+    min-height: 40px; 
+    line-height: 1.4;
+}
+
+.btn-more { 
+    text-decoration: none;
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase; 
+}
+
+/* linha laraj maior */
+.long-line-container {
+    width: 100%;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.3); 
+    position: relative;
+    clear: both; 
+}
+
+.long-line-active {
+    width: 33.3%;
+    height: 100%;
+    background-color: #ff4500;
+    position: absolute;
+    left: 0; top: 0;
+}
+
+/* side nav */
+.side-nav {
+    position: absolute;
+    right: 50px; 
+    top: 35%; 
+    z-index: 10;
+    text-align: right; color: rgba(255,255,255,0.3);
+}
+.side-nav span { 
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: bold; 
+}
+.side-nav span.active { 
+    color: white; 
+    font-size: 24px; 
+    position: relative; 
+    right: -10px; 
+}
+
+/* tours */
+.section-tours {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #1a1e21;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    position: relative;
+    color: white;
+    text-align: center;
+}
+
+.content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* titulos */
+.section-subtitle {
+    font-size: 11px;
+    color: #888;
+    margin-bottom: 10px;
+    text-transform: lowercase;
+    letter-spacing: 1px;
+}
+
+.section-title {
+    font-size: 20px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+    color: white;
+    font-weight: bold;
+}
+
+/* galeria */
+.tour-gallery {
+    width: 95%; 
+    margin: 0 auto;
+}
+
+.tour-card {
+    width: 22%;
+    float: left;
+    margin: 0 1.5%;
+    text-align: center;
+    position: relative;
+    overflow: hidden; 
+    height: 400px; 
+    cursor: pointer;
+}
+
+/* imag card */
+.tour-img-placeholder {
+    width: 100%; 
+    height: 100%;
+    background-color: #333;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.6s ease; 
+}
+
+/* grad parte infer da imag */
+.tour-img-placeholder::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%; height: 60%;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    z-index: 1;
+}
+
+/* efeito hover */
+.tour-card:hover .tour-img-placeholder {
+    transform: scale(1.1);
+}
+
+/* imagens tour */
+.t1 { 
+    background-image: url('../imagens/Tours/img1.jpg'); 
+}
+.t2 { 
+    background-image: url('../imagens/Tours/img2.jpeg'); 
+}
+.t3 { 
+    background-image: url('../imagens/Tours/img3.webp'); 
+}
+.t4 { 
+    background-image: url('../imagens/Tours/img4.jpg'); 
+}
+
+/* texto over */
+.card-text-overlay {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    text-align: center;
+    padding: 0 10px;
+}
+
+.tour-card h3 { 
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px; 
+    color: white;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.tour-desc {
+    color: #bbb;
+    font-size: 10px;
+    text-transform: lowercase;
+}
+
+/* indic de linha */
+.tour-indicators {
+    margin-top: 60px;
+    text-align: center;
+    clear: both;
+}
+
+.line-indicator {
+    display: inline-block;
+    width: 100px;
+    height: 1px;
+    background-color: #444;
+    margin: 0 15px;
+    position: relative;
+    vertical-align: middle;
+}
+
+/* left ball */
+.left-line::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -2px;
+    width: 5px; 
+    height: 5px;
+    background-color: #666;
+    border-radius: 50%;
+}
+
+/* right ball */
+.right-line::after {
+    content: '';
+    position: absolute; 
+    right: 0; top: -2px;
+    width: 5px; 
+    height: 5px;
+    background-color: #666;
+    border-radius: 50%;
+}
+.section-inspiration {
+    width: 100%;
+    height: 100vh;
+    background-image: url('../imagens/Montanha.jpg');
+    background-size: cover;
+    background-position: center bottom;
+    position: relative;
+}
+
+/* grad rodape */
+.overlay-gradient-bottom {
+    position: absolute;
+    bottom: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 60%;
+    background: linear-gradient(to top, #1a1e21, rgba(26, 30, 33, 0.8), transparent);
+    z-index: 1;
+}
+
+.footer-content {
+    position: absolute; 
+    bottom: 150px; left: 10%; 
+    z-index: 5;
+    color: white;
+}
+
+.footer-content h2 {
+    font-size: 50px; 
+    text-transform: uppercase; 
+    line-height: 1;
+    margin-bottom: 25px;
+}
+
+.play-container {
+    font-size: 14px;
+    color: #ccc;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.play-container i {
+    font-size: 35px;
+    vertical-align: middle;
+    margin-right: 15px;
+    transition: transform 0.3s;
+}
+.play-container:hover i { 
+    transform: scale(1.1); 
+    color: white; 
+}
+
+.play-container span {
+    vertical-align: middle;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+/* rodape inferior */
+.footer-desc {
+    position: absolute;
+    bottom: 60px; left: 10%;
+    width: 280px;
+    z-index: 5;
+}
+
+.footer-desc p {
+    color: #aaa;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.footer-thumbnails {
+    position: absolute; 
+    bottom: 60px; right: 10%;
+    z-index: 5;
+}
+
+.thumb {
+    width: 160px; 
+    height: 90px; 
+    background: #555;
+    display: inline-block; 
+    margin-left: 20px;
+    border: 1px solid rgba(255,255,255,0.3);
+    position: relative;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+.thumb:hover { 
+    border-color: white; 
+}
+
+.thumb::after {
+    content: '▶';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 14px;
+}
+
+.fade-transition-bottom {
+    position: absolute;
+    bottom: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 150px;
+    background: linear-gradient(to bottom, transparent, #1a1e21); 
+    z-index: 2;
+}
+
+.fade-transition-top {
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 150px;
+    background: linear-gradient(to bottom, #1a1e21, transparent);
+    z-index: 2;
+}
